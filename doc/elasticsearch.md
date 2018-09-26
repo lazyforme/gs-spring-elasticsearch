@@ -1,7 +1,3 @@
-**Directory**
-
-[TOC]
-
 # [Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/getting-started.html)
 
 > Elasticsearch is a highly scalable open-source full-text search and analytics engine. It allows you to store, search, and analyze big volumes of data quickly and in near real time. It is generally used as the underlying engine/technology that powers applications that have complex search features and requirements.
@@ -221,7 +217,7 @@ discovery.zen.ping.unicast.hosts: ["localhost:9300"]
 
 三个节点配置完成之后，使用如下命令进行启动：
 
-> ES_PATH_CONF=<ES_HOME>/config/node\_\*.conf ./bin/elasticsearch
+> ES_PATH_CONF=<ES\_HOME>/config/node\_\*.conf  ./bin/elasticsearch
 
 ### One Instances Per one Server
 
