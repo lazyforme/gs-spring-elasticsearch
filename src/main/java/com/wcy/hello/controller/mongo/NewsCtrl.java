@@ -17,7 +17,8 @@ public class NewsCtrl {
     private NewsRepo newsRepo;
 
     @GetMapping("/api/v1.0/news/list")
-    public Page<News> getNewsList(@RequestParam int page, @RequestParam int size) {
+    public Page<News> getNewsList(@RequestParam(value="page",required = true, defaultValue = "0") int page,
+                                  @RequestParam(value="size",required = true, defaultValue = "10") int size) {
         Sort sort = new Sort(Sort.Direction.DESC, "publishedTime");
         Pageable pageable = PageRequest.of(page,size,sort);
         Page<News> result = newsRepo.findAll(pageable);
