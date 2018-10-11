@@ -217,7 +217,7 @@ discovery.zen.ping.unicast.hosts: ["localhost:9300"]
 
 三个节点配置完成之后，使用如下命令进行启动：
 
-> ES_PATH_CONF=<ES\_HOME>/config/node\_\*.conf  ./bin/elasticsearch
+> ES_PATH_CONF=
 
 ### One Instances Per one Server
 

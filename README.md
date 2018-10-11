@@ -28,7 +28,7 @@ And now you are ready to start node and single cluster:
 
 > ./elasticsearch
 
-The elasticsearch http server is started on port `9200`. You can run the command below with `curl` into a terminal.
+The elasticsearch http server is started on port `9200`. You can run the command below with `curl` into a terminal.
 
 > curl -X GET "localhost:9200/_cat/health?v"
 
