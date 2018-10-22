@@ -204,9 +204,9 @@ And now we are ready to start our node and single cluster:
 
 与`Single Cluster Single Node`不同的地方在于，`Single Cluster Single Node`的`
 
-若要启动三个实例，只需要下载一个Elasticsearch的tar，将`
+若要启动三个实例，只需要下载一个Elasticsearch的tar，将
 
-> cluster.name: wcy_es  #集群名称
+> cluster.name: elastic  #集群名称
 node.name: node-1  #节点名称，每个节点一个，不同节点需要设置不同的名称
 node.max_local_storage_nodes: 3
 path.data: /Users/wcy/opt/elasticsearch-6.4.0/node_1.data  #指定节点data路径
@@ -217,7 +217,7 @@ discovery.zen.ping.unicast.hosts: ["localhost:9300"]
 
 三个节点配置完成之后，使用如下命令进行启动：
 
-> ES_PATH_CONF=
+> ES_PATH_CONF={ES_HOME}/{node_x_config}/  {ES_HOME}/bin/elasticsearch
 
 ### One Instances Per one Server
 
@@ -236,7 +236,9 @@ cd kibana-6.4.1-linux-x86_64/
 
 Kibana can be started from the command line as follows:
 
-> cd `
+> cd {kibana_home}
+>
+> ./bin/kibana
 
 Kibana is a web application that you access through port 5601. All you need to do is point your web browser at the machine where Kibana is running and specify the port number. For example, localhost:5601 or http://YOURDOMAIN.com:5601.
 

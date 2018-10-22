@@ -30,16 +30,18 @@ public class Dict_Product {
 
     private String desc;
 
-    private Date createdTime = new Date();
+    private Date createdTime;
 
-    private Date lastModTime = new Date();
+    private Date lastModTime;
 
     private Boolean archived = false;
+
+    private Dict_Product_Addons[] dict_product_addons;
 
     public Dict_Product() {
     }
 
-    public Dict_Product(String id, String catalog, String keywords, String companyName, String registry, String name, String productName, String desc, Date createdTime, Date lastModTime, Boolean archived) {
+    public Dict_Product(String id, String catalog, String keywords, String companyName, String registry, String name, String productName, String desc, Date createdTime, Date lastModTime, Boolean archived, Dict_Product_Addons[] dict_product_addons) {
         this.id = id;
         this.catalog = catalog;
         this.keywords = keywords;
@@ -51,6 +53,7 @@ public class Dict_Product {
         this.createdTime = createdTime;
         this.lastModTime = lastModTime;
         this.archived = archived;
+        this.dict_product_addons = dict_product_addons;
     }
 
     public String getId() {
@@ -141,4 +144,11 @@ public class Dict_Product {
         this.archived = archived;
     }
 
+    public Dict_Product_Addons[] getDict_product_addons() {
+        return dict_product_addons;
+    }
+
+    public void setDict_product_addons(Dict_Product_Addons[] dict_product_addons) {
+        this.dict_product_addons = dict_product_addons;
+    }
 }

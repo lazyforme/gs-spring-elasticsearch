@@ -4,7 +4,11 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
 import org.springframework.data.mongodb.core.index.Indexed;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
 
 @Document(indexName = "sznongfu_merchant_dict", type = "dict.product")
 public class Dict_Product {
@@ -36,12 +40,12 @@ public class Dict_Product {
 
     private Boolean archived = false;
 
-    //private Dict_Product_Addons[] addons;
+    private ArrayList<HashMap<String, Object>> addons;
 
     public Dict_Product() {
     }
 
-    public Dict_Product(String id, String catalog, String keywords, String companyName, String registry, String name, String productName, String desc, Date createdTime, Date lastModTime, Boolean archived) {
+    public Dict_Product(String id, String catalog, String keywords, String companyName, String registry, String name, String productName, String desc, Date createdTime, Date lastModTime, Boolean archived, ArrayList<HashMap<String, Object>> addons) {
         this.id = id;
         this.catalog = catalog;
         this.keywords = keywords;
@@ -53,6 +57,7 @@ public class Dict_Product {
         this.createdTime = createdTime;
         this.lastModTime = lastModTime;
         this.archived = archived;
+        this.addons = addons;
     }
 
     public String getId() {
@@ -141,5 +146,13 @@ public class Dict_Product {
 
     public void setArchived(Boolean archived) {
         this.archived = archived;
+    }
+
+    public ArrayList<HashMap<String, Object>> getAddons() {
+        return addons;
+    }
+
+    public void setAddons(ArrayList<HashMap<String, Object>> addons) {
+        this.addons = addons;
     }
 }

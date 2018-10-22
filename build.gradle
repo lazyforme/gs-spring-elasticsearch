@@ -41,5 +41,6 @@ dependencies {
         exclude module: 'spring-boot-starter-tomcat'
     }
     compile('org.springframework.boot:spring-boot-starter-jetty')
+    compile('com.alibaba:fastjson:1.2.49')
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }
